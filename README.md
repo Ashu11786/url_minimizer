@@ -2,7 +2,7 @@
 URL minimizer minimized the long original URL into shorten length. 
 It's easy to share with short length url.
 This is particularly useful for sharing links on social media platforms, in emails, or anywhere else where long URLs are unwieldy.
-Access the url_minimizer using "https://localhost:5000"
+Access the url_minimizer using "localhost:5000"
 
 ##Features
 
