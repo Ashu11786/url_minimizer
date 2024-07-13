@@ -11,20 +11,21 @@
     <title>URL_Minimizer</title>
 </head>
 
-<body style="background-color: antiquewhite;">
+<body style="background-color: rgb(179, 242, 120);">
     <div class="container display-center" style="display: block; align-items: center; color: rgb(34, 165, 165);">
-        <h1 style="text-align: center; color: rgb(230, 101, 101);margin-top: 150px;  font-size: 2.8rem;">Welcome To URL Minimizer !</h1>
+        <h1 style="text-align: center; color: rgb(136, 13, 13);margin-top: 150px;  font-size: 2.8rem;">Welcome To URL Minimizer !</h1>
         <form action="/shortUrls" method="POST" class="my-4 form-inline" style="display: inline-flex;">
             <label for="fullUrl" class="sr-only"></label>
             <input required placeholder="Enter or Paste Your long Url" type="url" name="fullUrl" id="fullUrl" class="mr-2 col form-control" style="border: 1px solid gray; width: 70vw;">
             <button class="btn btn-success" type="submit" style="margin: 5px; height: 50px; box-shadow: 10px 10px rgb(173, 250, 136);">Get_MiniUrl</button>
         </form>
         <div class="getShort" style="display:inline-flex; align-items: center;">
-            <div style="text-align:start; font: 1.6rem arial; margin-right: 10px; display: inline;"> Your Minimized URL: </div>
+            <div style="text-align:start; font: 1.6rem arial; margin-right: 10px; display: inline; color: blue;"> Your Minimized URL: </div>
             <div id="tiny" class=" display-block h-45 inline" style="margin-left: 50px; margin-top: 5px;">
                 <table class="table table-striped table-responsive">
                     <thead style="font: 1.3rem arial;">
                         <tr>
+                            <th>Long_URL</th>
                             <th>Mini_URL</th>
                             <th>Clicks</th>
                             <th>Date & Time</th>
@@ -33,6 +34,11 @@
                     <tbody>
                         <% shortUrls.forEach(shortUrl=>{ %>
                             <tr>
+                                <td>
+                                    <a href="<%= shortUrl.full %>">
+                                        <%= shortUrl.full %>
+                                    </a>
+                                </td>
                                 <td>
                                     <a href="<%= shortUrl.short %>">
                                         <%= shortUrl.short %>
@@ -46,8 +52,8 @@
                 </table>
             </div>
         </div>
-        <p style="color: red; margin-left: 150px; border: 1px solid skyblue; text-align: center; height: 35px; background-color: aquamarine; border-radius: 10px;" ><span style="color: black; font-size: 1.11rem; margin-right: 5px;">NOTE:- </span> Hurry Up!! The Above Data Will Be Deleted In 5 Minutes</p>
-        <div style="text-align: center; align-items: baseline; font: 1rem arial; margin: 100px;">Made By &copy; Ashu || 2024</div>
+        <p style="color: red; margin-left: 150px; border: 1px solid skyblue; text-align: center; height: 35px; background-color: aquamarine; border-radius: 10px; box-shadow: 2px 2px lightcoral;" ><span style="color: black; font-size: 1.11rem; margin-right: 5px;">NOTE:- </span> Hurry Up!! The Above Data Will Be Deleted In 5 Minutes</p>
+        <div style="text-align: center; align-items: baseline; font: 1rem arial; margin: 100px; color: rgb(4, 57, 57);">Made By &copy; Ashu || 2024</div>
 </body>
 
 </html>
